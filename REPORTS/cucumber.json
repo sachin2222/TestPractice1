@@ -3,200 +3,112 @@
     "line": 1,
     "elements": [
       {
-        "line": 13,
+        "line": 3,
         "name": "Successful login with valid input credentials",
         "description": "",
-        "id": "login-authentication-for-orangehrm-application;successful-login-with-valid-input-credentials;;2",
+        "id": "login-authentication-for-orangehrm-application;successful-login-with-valid-input-credentials",
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 37978713500,
+              "duration": 564533100,
               "status": "passed"
             },
             "line": 4,
             "name": "User open application on chrome browser",
             "match": {
-              "location": "orangeHRMSteps.user_open_application_on_chrome_browser()"
+              "location": "StepsDefHashMap.user_open_application_on_chrome_browser()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 13370500,
+              "duration": 35200,
               "status": "passed"
             },
             "line": 5,
             "name": "user lands on login page",
             "match": {
-              "location": "orangeHRMSteps.user_lands_on_login_page()"
+              "location": "StepsDefHashMap.user_lands_on_login_page()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 130009800,
+              "duration": 6136900,
               "status": "passed"
             },
             "line": 6,
-            "name": "user enter username\"Admin\"",
+            "name": "user enter username and password",
             "match": {
-              "arguments": [
-                {
-                  "val": "Admin",
-                  "offset": 20
-                }
-              ],
-              "location": "orangeHRMSteps.user_enter_username(String)"
+              "location": "StepsDefHashMap.user_enter_username_and_password(DataTable)"
             },
-            "matchedColumns": [
-              0
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "password",
+                  "email",
+                  "firstname",
+                  "lastname"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "Admin",
+                  "admin123",
+                  "sachin@fiberhome.com",
+                  "sachin",
+                  "sharma"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "sachin",
+                  "sachin123",
+                  "xyz",
+                  "xyz",
+                  "xyz"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "kapil",
+                  "kapil123",
+                  "bc",
+                  "xyz",
+                  "999"
+                ],
+                "line": 10
+              }
             ],
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 106504300,
+              "duration": 92800,
               "status": "passed"
             },
-            "line": 7,
-            "name": "user enters password\"admin123\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "admin123",
-                  "offset": 21
-                }
-              ],
-              "location": "orangeHRMSteps.user_enters_password(String)"
-            },
-            "matchedColumns": [
-              1
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 24629927200,
-              "status": "passed"
-            },
-            "line": 8,
+            "line": 11,
             "name": "user clicks on submit button",
             "match": {
-              "location": "orangeHRMSteps.user_clicks_on_submit_button()"
+              "location": "StepsDefHashMap.user_clicks_on_submit_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 13520600,
+              "duration": 44300,
               "status": "passed"
             },
-            "line": 9,
+            "line": 12,
             "name": "User lands on home Page.",
             "match": {
-              "location": "orangeHRMSteps.user_lands_on_home_Page()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "line": 26,
-        "name": "Failure login with invalid input credentials",
-        "description": "",
-        "id": "login-authentication-for-orangehrm-application;failure-login-with-invalid-input-credentials;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 9323795800,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "User open application on chrome browser",
-            "match": {
-              "location": "orangeHRMSteps.user_open_application_on_chrome_browser()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 10676100,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "user lands on login page",
-            "match": {
-              "location": "orangeHRMSteps.user_lands_on_login_page()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 121194000,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "user enter username\"sachin\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "sachin",
-                  "offset": 20
-                }
-              ],
-              "location": "orangeHRMSteps.user_enter_username(String)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 98083600,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "user enters password\"sachin123\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "sachin123",
-                  "offset": 21
-                }
-              ],
-              "location": "orangeHRMSteps.user_enters_password(String)"
-            },
-            "matchedColumns": [
-              1
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 3168414800,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "user clicks on submit button",
-            "match": {
-              "location": "orangeHRMSteps.user_clicks_on_submit_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 61400,
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "User should remains on login page",
-            "match": {
-              "location": "orangeHRMSteps.user_should_remains_on_login_page()"
+              "location": "StepsDefHashMap.user_lands_on_home_Page()"
             },
             "keyword": "Then "
           }
@@ -207,6 +119,6 @@
     "description": "",
     "id": "login-authentication-for-orangehrm-application",
     "keyword": "Feature",
-    "uri": "./Features/Login.feature"
+    "uri": "./Features/LoginHashMap.feature"
   }
 ]
