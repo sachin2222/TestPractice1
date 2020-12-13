@@ -4,6 +4,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
+@Deprecated
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = ".\\Features\\Login.feature"
