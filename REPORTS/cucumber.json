@@ -3,122 +3,116 @@
     "line": 1,
     "elements": [
       {
-        "line": 3,
-        "name": "Successful login with valid input credentials",
+        "line": 4,
+        "name": "tagged hook test_1",
         "description": "",
-        "id": "login-authentication-for-orangehrm-application;successful-login-with-valid-input-credentials",
+        "id": "hooks;tagged-hook-test-1",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 564533100,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "User open application on chrome browser",
-            "match": {
-              "location": "StepsDefHashMap.user_open_application_on_chrome_browser()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 35200,
+              "duration": 368850500,
               "status": "passed"
             },
             "line": 5,
-            "name": "user lands on login page",
+            "name": "this is for third hook test",
             "match": {
-              "location": "StepsDefHashMap.user_lands_on_login_page()"
+              "location": "HooksTestSteps.this_is_for_third_hook_test()"
             },
-            "keyword": "When "
-          },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Third"
+          }
+        ]
+      },
+      {
+        "before": [
           {
             "result": {
-              "duration": 6136900,
+              "duration": 1012600,
               "status": "passed"
             },
-            "line": 6,
-            "name": "user enter username and password",
             "match": {
-              "location": "StepsDefHashMap.user_enter_username_and_password(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "username",
-                  "password",
-                  "email",
-                  "firstname",
-                  "lastname"
-                ],
-                "line": 7
-              },
-              {
-                "cells": [
-                  "Admin",
-                  "admin123",
-                  "sachin@fiberhome.com",
-                  "sachin",
-                  "sharma"
-                ],
-                "line": 8
-              },
-              {
-                "cells": [
-                  "sachin",
-                  "sachin123",
-                  "xyz",
-                  "xyz",
-                  "xyz"
-                ],
-                "line": 9
-              },
-              {
-                "cells": [
-                  "kapil",
-                  "kapil123",
-                  "bc",
-                  "xyz",
-                  "999"
-                ],
-                "line": 10
-              }
-            ],
-            "keyword": "Then "
-          },
+              "location": "HooksTestSteps.setup()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "tagged hook test-2",
+        "description": "",
+        "id": "hooks;tagged-hook-test-2",
+        "after": [
           {
             "result": {
-              "duration": 92800,
+              "duration": 297800,
               "status": "passed"
             },
+            "match": {
+              "location": "HooksTestSteps.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 287800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "this is for first tag test",
+            "match": {
+              "location": "HooksTestSteps.this_is_for_first_tag_test()"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "line": 7,
+            "name": "@First"
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "tagged hook test_3",
+        "description": "",
+        "id": "hooks;tagged-hook-test-3",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 145900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "this is for second tag test",
+            "match": {
+              "location": "HooksTestSteps.this_is_for_second_tag_test()"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
             "line": 11,
-            "name": "user clicks on submit button",
-            "match": {
-              "location": "StepsDefHashMap.user_clicks_on_submit_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 44300,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "User lands on home Page.",
-            "match": {
-              "location": "StepsDefHashMap.user_lands_on_home_Page()"
-            },
-            "keyword": "Then "
+            "name": "@Second"
           }
         ]
       }
     ],
-    "name": "Login Authentication for OrangeHRM application",
+    "name": "Hooks",
     "description": "",
-    "id": "login-authentication-for-orangehrm-application",
+    "id": "hooks",
     "keyword": "Feature",
-    "uri": "./Features/LoginHashMap.feature"
+    "uri": "./Features/HooksTest.feature"
   }
 ]

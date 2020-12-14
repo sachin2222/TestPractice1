@@ -7,10 +7,12 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = ".\\Features\\Login.feature"
-        ,glue={"stepsDefinition"},
+        features = ".\\Features\\HooksTest.feature"
+        ,glue={"hooks"},
         format={"pretty", "html:REPORTS/cucumber.html","json:REPORTS/cucumber.json"},
-        dryRun = false
+        dryRun = false,
+        tags={"~@Smoke","~@Regression","~@End2End"},
+        monochrome = true
 )
 public class OrangeHRMRunner {
 }

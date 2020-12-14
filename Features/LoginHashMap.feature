@@ -4,9 +4,7 @@ Feature: Login Authentication for OrangeHRM application
     Given User open application on chrome browser
     When user lands on login page
     Then user enter username and password
-    |username|password|email|firstname|lastname|
-      |Admin|admin123|sachin@fiberhome.com|sachin|sharma|
-      |sachin|sachin123|xyz               |xyz   |xyz   |
-      |kapil |kapil123 |bc                |xyz   |999   |
+    |username|password|
+    |Admin|admin123|
     And user clicks on submit button
     Then User lands on home Page.

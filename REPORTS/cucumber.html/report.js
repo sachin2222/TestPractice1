@@ -1,119 +1,95 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("./Features/LoginHashMap.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("./Features/HooksTest.feature");
 formatter.feature({
   "line": 1,
-  "name": "Login Authentication for OrangeHRM application",
+  "name": "Hooks",
   "description": "",
-  "id": "login-authentication-for-orangehrm-application",
+  "id": "hooks",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "line": 3,
-  "name": "Successful login with valid input credentials",
-  "description": "",
-  "id": "login-authentication-for-orangehrm-application;successful-login-with-valid-input-credentials",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
   "line": 4,
-  "name": "User open application on chrome browser",
-  "keyword": "Given "
+  "name": "tagged hook test_1",
+  "description": "",
+  "id": "hooks;tagged-hook-test-1",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 3,
+      "name": "@Third"
+    }
+  ]
 });
 formatter.step({
   "line": 5,
-  "name": "user lands on login page",
-  "keyword": "When "
+  "name": "this is for third hook test",
+  "keyword": "Given "
 });
-formatter.step({
-  "line": 6,
-  "name": "user enter username and password",
-  "rows": [
+formatter.match({
+  "location": "HooksTestSteps.this_is_for_third_hook_test()"
+});
+formatter.result({
+  "duration": 368850500,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1012600,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 8,
+  "name": "tagged hook test-2",
+  "description": "",
+  "id": "hooks;tagged-hook-test-2",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
     {
-      "cells": [
-        "username",
-        "password",
-        "email",
-        "firstname",
-        "lastname"
-      ],
-      "line": 7
-    },
-    {
-      "cells": [
-        "Admin",
-        "admin123",
-        "sachin@fiberhome.com",
-        "sachin",
-        "sharma"
-      ],
-      "line": 8
-    },
-    {
-      "cells": [
-        "sachin",
-        "sachin123",
-        "xyz",
-        "xyz",
-        "xyz"
-      ],
-      "line": 9
-    },
-    {
-      "cells": [
-        "kapil",
-        "kapil123",
-        "bc",
-        "xyz",
-        "999"
-      ],
-      "line": 10
+      "line": 7,
+      "name": "@First"
     }
-  ],
-  "keyword": "Then "
+  ]
 });
 formatter.step({
-  "line": 11,
-  "name": "user clicks on submit button",
-  "keyword": "And "
+  "line": 9,
+  "name": "this is for first tag test",
+  "keyword": "Given "
 });
-formatter.step({
+formatter.match({
+  "location": "HooksTestSteps.this_is_for_first_tag_test()"
+});
+formatter.result({
+  "duration": 287800,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 297800,
+  "status": "passed"
+});
+formatter.scenario({
   "line": 12,
-  "name": "User lands on home Page.",
-  "keyword": "Then "
+  "name": "tagged hook test_3",
+  "description": "",
+  "id": "hooks;tagged-hook-test-3",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 11,
+      "name": "@Second"
+    }
+  ]
+});
+formatter.step({
+  "line": 13,
+  "name": "this is for second tag test",
+  "keyword": "Given "
 });
 formatter.match({
-  "location": "StepsDefHashMap.user_open_application_on_chrome_browser()"
+  "location": "HooksTestSteps.this_is_for_second_tag_test()"
 });
 formatter.result({
-  "duration": 564533100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "StepsDefHashMap.user_lands_on_login_page()"
-});
-formatter.result({
-  "duration": 35200,
-  "status": "passed"
-});
-formatter.match({
-  "location": "StepsDefHashMap.user_enter_username_and_password(DataTable)"
-});
-formatter.result({
-  "duration": 6136900,
-  "status": "passed"
-});
-formatter.match({
-  "location": "StepsDefHashMap.user_clicks_on_submit_button()"
-});
-formatter.result({
-  "duration": 92800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "StepsDefHashMap.user_lands_on_home_Page()"
-});
-formatter.result({
-  "duration": 44300,
+  "duration": 145900,
   "status": "passed"
 });
 });
