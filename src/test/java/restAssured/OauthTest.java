@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -27,7 +26,7 @@ public class OauthTest {
     {
         RestAssured.baseURI="https://rahulshettyacademy.com/getCourse.php";
         String responseBody=given().urlEncodingEnabled(false).queryParam("access_token",Access_Token).relaxedHTTPSValidation().
-                header("Content-Type","application/json").when().get().then().extract().response().asString();
+                header("Content-Type","application/json").when().get().then().log().all().extract().response().asString();
 
         System.out.println(responseBody);
 
